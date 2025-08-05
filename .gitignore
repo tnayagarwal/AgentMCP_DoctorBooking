@@ -1,0 +1,13 @@
+﻿__pycache__/
+*.pyc
+venv/
+.venv/
+.env
+token.json
+client_secret_*.json
+frontend/node_modules/
+frontend/dist/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
