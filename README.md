@@ -1,3 +1,8 @@
+[View screenshots (PDF)](./ss.pdf)
+
+![Screenshot 1](docs/ss-1.png)
+![Screenshot 2](docs/ss-2.png)
+
 ## Dobbe – Patient & Report Agents
 
 End-to-end agents with FastAPI, PostgreSQL, Groq LLM, Google Calendar + Gmail, and WhatsApp Cloud API. Includes REPLs and automated tests.
