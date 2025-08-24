@@ -32,7 +32,7 @@ app.add_middleware(
 )
 
 # Database connection
-DATABASE_URL = "postgresql://postgres:TaNaY@localhost:5432/clinicdb"
+DATABASE_URL = "xxx"
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
