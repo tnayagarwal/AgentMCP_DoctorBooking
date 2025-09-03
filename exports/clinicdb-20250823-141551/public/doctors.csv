@@ -1,0 +1,6 @@
+doctor_id,name,specialization,email,phone,created_at
+1,Dr. Asha Ahuja,Cardiology,asha.ahuja@clinic.com,+91-7000000001,2025-08-23 13:21:33.950382
+3,Dr. Karan Mehta,Dermatology,karan.mehta@clinic.com,+91-7000000002,2025-08-23 13:21:41.283495
+4,Dr. Neha Rao,Pediatrics,neha.rao@clinic.com,+91-7000000003,2025-08-23 13:21:41.286303
+5,Dr. Vivek Shah,General Medicine,vivek.shah@clinic.com,+91-7000000004,2025-08-23 13:21:41.28914
+6,Asha Ahuja,Cardiology,ahuja@example.com,1234567890,2025-08-23 13:48:54.025983
