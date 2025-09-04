@@ -45,7 +45,7 @@ streamlit run scripts\demo_ui.py
 ```
 
 ### Environment Variables
-Copy `.env.example` to `.env` and set values. Never commit secrets.
+Copy `env.sample` to `.env` and set values. Never commit secrets.
 
 ### Notes
 - Alembic migrations can be added if needed. For demo, tables auto-create.

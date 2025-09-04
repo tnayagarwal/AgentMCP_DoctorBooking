@@ -1,0 +1,11 @@
+graph TD
+	User[User/Patient] --> UI[Streamlit Demo]
+	UI -->|parse| NLP[/FastAPI: /nlp/parse_booking/]
+	UI -->|browse/book| API[FastAPI Routers]
+	API --> SVC[Services: booking, notifications, calendar]
+	API --> DB[(SQLAlchemy DB)]
+	SVC --> INTEG[Integrations: Gmail/WhatsApp/ICS]
+	API --> WRK[Workers (Celery optional)]
+	WRK --> INTEG
+	Admin[Admin/Staff] --> API
+	API --> Export[Excel Exports]
