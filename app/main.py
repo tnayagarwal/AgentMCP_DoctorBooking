@@ -4,6 +4,8 @@ from app.config import settings
 from app.db import engine, Base
 from app.routers import doctors, patients, appointments, admin
 from app.routers import nlp, reminders
+from app.routers import insurance
+from app.routers import admin_calendar
 
 app = FastAPI(title="Clinic Scheduling API", version="1.0.0")
 
@@ -24,6 +26,8 @@ app.include_router(appointments.router)
 app.include_router(admin.router)
 app.include_router(nlp.router)
 app.include_router(reminders.router)
+app.include_router(insurance.router)
+app.include_router(admin_calendar.router)
 
 @app.get("/")
 

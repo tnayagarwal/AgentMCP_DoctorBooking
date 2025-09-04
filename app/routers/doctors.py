@@ -35,3 +35,9 @@ def availability_for_date(doctor_id: int, date: str, db: Session = Depends(get_d
 	).all()
 	return rows
 
+@router.get("/search/{name}", response_model=List[DoctorOut])
+def search_doctors(name: str, db: Session = Depends(get_db)):
+	q = f"%{name.lower()}%"
+	rows = db.query(models.Doctor).filter(models.Doctor.name.ilike(q)).all()
+	return rows
+

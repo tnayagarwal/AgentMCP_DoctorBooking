@@ -66,8 +66,8 @@ def normalize_time(s: str | None) -> str | None:
 def nlp_parse_booking(payload: dict = Body(...)):
 	text = payload.get("text", "")
 	prompt = (
-		"Return ONLY JSON with: doctor_name, date (YYYY-MM-DD or natural), start_time (HH:MM or HH:MM:SS), "
-		"patient_email, reason."
+		"Return ONLY JSON with: intent, doctor_name, date (YYYY-MM-DD or natural), start_time (HH:MM or HH:MM:SS), "
+		"patient_email, reason, visit_type (new|returning), location."
 		f" Text: {text}"
 	)
 	resp = _get_llm().invoke(prompt).content

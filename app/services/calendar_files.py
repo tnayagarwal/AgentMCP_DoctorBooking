@@ -1,5 +1,6 @@
 from datetime import datetime
 
+
 def create_ics(summary: str, start_iso: str, end_iso: str, attendee: str | None = None) -> str:
 	uid = datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
 	content = (

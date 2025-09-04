@@ -1,6 +1,9 @@
 import os
 import base64
 from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+from email.mime.base import MIMEBase
+from email import encoders
 import requests
 from app.config import settings
 
@@ -30,6 +33,27 @@ def send_email(to_email: str, subject: str, body: str) -> bool:
 	except Exception:
 		return False
 
+
+def send_email_with_attachment(to_email: str, subject: str, body: str, filepath: str) -> bool:
+	service = _gmail_service()
+	if not service:
+		return False
+	msg = MIMEMultipart()
+	msg['to'] = to_email
+	msg['subject'] = subject
+	msg.attach(MIMEText(body))
+	try:
+		with open(filepath, 'rb') as f:
+			part = MIMEBase('application', 'octet-stream')
+			part.set_payload(f.read())
+			encoders.encode_base64(part)
+			part.add_header('Content-Disposition', f'attachment; filename="{filepath.split('/')[-1]}"')
+			msg.attach(part)
+		raw = base64.urlsafe_b64encode(msg.as_bytes()).decode()
+		service.users().messages().send(userId='me', body={'raw': raw}).execute()
+		return True
+	except Exception:
+		return False
 
 def whatsapp_send_text(message: str, to: str | None = None) -> tuple[int, str]:
 	token = settings.whatsapp_token
