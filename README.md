@@ -24,11 +24,20 @@ uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 
 ### API Overview
 - `GET /doctors` – list doctors
+- `GET /doctors/search/{name}` – search doctors by name
 - `GET /patients` – list patients
 - `GET /doctors/{id}/availability/{YYYY-MM-DD}` – free slots
 - `POST /appointments/book` – book with 60/30 min logic
+- `POST /appointments/{id}/confirm` – confirm/cancel; sends intake form on confirm
+- `POST /appointments/{id}/forms` – mark intake forms completed
 - `GET /admin/export/appointments.xlsx` – Excel export
 - `POST /nlp/parse_booking` – Groq-based JSON parse of booking text
+- `GET /calendar/appointment/{id}.ics` – download ICS
+- `POST /insurance/{patient_id}` – set insurance for a patient; `GET` to fetch
+- `POST /intake/start` – greeting + capture basic info
+- `POST /reschedule/day` – move all appts for a doctor from one day to another
+- `GET /analytics/count?date=YYYY-MM-DD[&doctor_id]`
+- `GET /analytics/busiest?start_date=YYYY-MM-DD&end_date=YYYY-MM-DD[&doctor_id]`
 
 ### Demo UI (Optional)
 ```powershell
@@ -41,6 +50,7 @@ Copy `.env.example` to `.env` and set values. Never commit secrets.
 ### Notes
 - Alembic migrations can be added if needed. For demo, tables auto-create.
 - WhatsApp and Gmail use best-effort fallbacks if credentials are missing.
+ - Copy `.env.example` to `.env` and set keys. Do not commit secrets.
 
 
 
