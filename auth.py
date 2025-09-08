@@ -14,7 +14,7 @@ def get_credentials():
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
-                'C:\Users\Tanay\dobbe\client_secret_902553061044-vbhm9g0ld97fovcjq9u1o4qucg7s7ea7.apps.googleusercontent.com (1).json', SCOPES)
+                '&&&', SCOPES)
             creds = flow.run_local_server(port=8080)
         with open('token.json', 'w') as token:
             token.write(creds.to_json())
