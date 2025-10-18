@@ -1,4 +1,4 @@
-[View screenshots (PDF)](./ss.pdf)
+[ALL SCREENSHOTS AVAILABLE HERE (PDF)](./ss.pdf)
 
 ![Screenshot 1](docs/ss-1.png)
 ![Screenshot 2](docs/ss-2.png)
