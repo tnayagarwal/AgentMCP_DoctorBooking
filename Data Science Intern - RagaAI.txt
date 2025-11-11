@@ -1,0 +1,164 @@
+﻿AI Scheduling Agent Case Study - Intern 
+Assignment 
+
+Project Overview 
+Build a medical appointment scheduling AI agent that automates patient booking, 
+reduces no-shows, and streamlines clinic operations. This mirrors real-world challenges in 
+healthcare technology. 
+
+Business Problem 
+Medical practices lose 20-50% revenue due to no-shows, missed insurance collection, and 
+scheduling inefficiencies. Your AI agent will solve these operational pain points. 
+
+Technical Requirements 
+Core Features to Implement (MVP-1) 
+
+Feature Description Technical Challenge 
+
+Patient Greeting Collect name, DOB, doctor, Data validation & NLP 
+location 
+
+Patient Lookup Search EMR, detect new vs Database integration 
+returning. Use any DB of choice. 
+Feel free to generate synthetic data 
+of your choice here with 50 patients 
+
+Smart Scheduling 60min (new patient) vs 30min Business logic 
+(returning patient) implementation 
+
+Calendar Integration Show available slots. Calendy tool File/API management 
+integration 
+
+Insurance Collection Capture carrier, member ID, group Data structuring 
+
+Appointment Export to Excel, send confirmations File operations & 
+Confirmation messaging 
+
+Form Distribution Email patient intake forms. This will Integration & automation 
+only be sent after the appointment 
+is confirmed. Attached are the 
+sample forms in the case-study 
+
+
+
+Reminder System 3 automated reminders with Scheduling & tracking 
+confirmations on their email and 
+SMS. 1st reminder should be 
+regular, while 2nd and 3rd reminder 
+should have actions: 
+
+1)​ Have they filled the forms? 
+2)​ If their visit is confirmed or 
+
+not? If not, please mention 
+the reason for cancellation? 
+
+Mock Data Sources (Provided) 
+
+●​ Patient Database: CSV with 50 sample patients - Synthetically generate this 
+●​ Doctor Schedules: Excel files with availability - Assumption of your choice, synthetic 
+
+generation 
+●​ Appointment Templates: Form templates 
+
+Technical Stack Options (Choice from either of the 2 choices) 
+
+Option 1: LangGraph + LangChain 
+
+●​ Multi-agent orchestration with LangGraph 
+●​ LangChain tools for integrations 
+●​ Any LLM of your choice 
+
+Option 2: Agent Development Toolkit (ADK) 
+
+●​ Built-in agent framework 
+●​ Pre-configured medical templates 
+●​ Streamlined development process 
+
+Integration Requirements 
+
+●​ Patient Data: Read from CSV (simulate EMR) 
+●​ Calendar Management: Calendly tool file operations for booking it on calendar and 
+
+schedule should be on the excel (simulated data) 
+●​ Communication: Email & SMS 
+●​ Data Export: Generate Excel reports for "admin review". As per the above steps.  
+
+Deliverables (Due: Saturday 4 PM) 
+1. Technical Approach Document (1 page) 
+
+●​ Architecture Overview: Agent design and workflow 
+●​ Framework Choice: LangGraph/LangChain vs ADK with justification 
+●​ Integration Strategy: How you handled data sources 
+●​ Challenges & Solutions: Key technical decisions made 
+
+
+
+2. Demo Video (3-5 minutes) 
+
+●​ Live Interface: Streamlit or Gradio chatbot demo 
+●​ Complete Flow: Patient booking from greeting to confirmation 
+●​ Key Features: Show calendar integration, Excel export, reminder setup 
+●​ Edge Cases: Demonstrate error handling 
+
+3. Executable Code Package 
+
+●​ Complete Source Code: All Python files, requirements.txt 
+●​ Sample Data: Include test patient data and schedules 
+●​ Configuration: Environment setup guide 
+
+Evaluation Criteria 
+Technical Implementation (50%) 
+
+●​ Agent architecture and workflow design 
+●​ Code quality, error handling, documentation 
+●​ Integration with mock data sources 
+●​ Framework utilization effectiveness 
+
+User Experience (30%) 
+
+●​ Conversation flow naturalness 
+●​ Interface usability (Streamlit/Gradio) 
+●​ Error handling and edge cases 
+●​ Complete booking workflow execution 
+
+Business Logic (20%) 
+
+●​ Accurate patient type detection 
+●​ Proper appointment duration assignment 
+●​ Calendar availability management 
+●​ Data export functionality 
+
+Success Metrics 
+
+●​ Functional Demo: Complete patient booking workflow 
+●​ Data Accuracy: Correct patient classification and scheduling 
+●​ Integration Success: Excel exports and calendar management working 
+●​ Code Quality: Clean, documented, executable codebase 
+
+Timeline Expectations 
+●​ Day 1: Architecture design, framework setup, basic conversation flow 
+
+
+
+●​ Day 2: Core feature implementation, data integration, testing 
+●​ Day 3: UI development, demo preparation, documentation completion 
+
+Submission Format 
+Email with subject: "AI Scheduling Agent - [Your Name]" to chaithra.mk@raga.ai and fill 
+the google form attached to submit the case study.  
+
+●​ Attachment 1: Technical approach document (PDF) 
+●​ Attachment 2: Demo video (MP4, max 50MB) 
+●​ Attachment 3: Code package (ZIP file with all source code) 
+
+Deadline: Saturday, 6th September, 4 PM - No exceptions 
+
+This project simulates real healthcare AI development challenges and demonstrates your 
+ability to build practical AI solutions with business impact. 
+
+Post submission of this case-study, evaluations take 2-3 days, followed by a discussion with 
+the Hiring Manager and you will be given an offer for 3 to 6 months of internship. This is 
+work from office internship with 3 days WFO and 2 days WFH 
+
+All the best for the case-study round!
