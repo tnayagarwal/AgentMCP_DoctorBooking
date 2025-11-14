@@ -63,10 +63,15 @@ class AppointmentIn(BaseModel):
 	start_time: time
 	end_time: time
 	reason: Optional[str] = None
+	location: Optional[str] = None
+	visit_type: Optional[str] = None
 
 class AppointmentOut(AppointmentIn):
 	appointment_id: int
 	status: str
+	forms_completed: bool | None = None
+	confirmation_status: Optional[str] = None
+	cancel_reason: Optional[str] = None
 	created_at: datetime
 
 	class Config:

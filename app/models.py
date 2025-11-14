@@ -60,6 +60,11 @@ class Appointment(Base):
 	end_time = Column(Time, nullable=False)
 	reason = Column(Text)
 	status = Column(String, default="Scheduled")
+	visit_type = Column(String)  # 'new' or 'returning'
+	location = Column(String)
+	forms_completed = Column(Boolean, default=False)
+	confirmation_status = Column(String)  # 'pending' | 'confirmed' | 'cancelled'
+	cancel_reason = Column(Text)
 	created_at = Column(DateTime, server_default=func.now())
 
 	doctor = relationship("Doctor", back_populates="appointments")
