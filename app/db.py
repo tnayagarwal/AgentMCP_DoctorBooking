@@ -13,3 +13,5 @@ def get_db():
 		yield db
 	finally:
 		db.close()
+
+# Developer comment #6 for optimization and readability check.
